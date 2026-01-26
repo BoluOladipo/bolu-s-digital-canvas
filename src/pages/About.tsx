@@ -64,7 +64,7 @@ const About = () => {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 My journey in tech started with a curiosity about how things work on the web. Today, I've had 
-                the privilege of working with startups, agencies, and enterprise clients, including Olam Agri, 
+                the privilege of working with International Companies, Freelance Jobs, startups, agencies, and enterprise clients, including Cowrywise, Olam Agri, 
                 helping them build products that impact thousands of users.
               </p>
               <p className="text-muted-foreground leading-relaxed">
