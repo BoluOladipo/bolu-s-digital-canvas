@@ -7,6 +7,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ProjectCard from "@/components/ui/ProjectCard";
 
+// Import project images
+import foodOrderingImg from "@/assets/projects/food-ordering.png";
+import logisticsImg from "@/assets/projects/logistics.png";
+import aiResumeImg from "@/assets/projects/ai-resume.png";
+
 const services = [
   {
     icon: Code,
@@ -35,16 +40,19 @@ const featuredProjects = [
     title: "Food Ordering System",
     description: "A complete food ordering platform with real-time order tracking and payment integration.",
     techStack: ["React", "Node.js", "MongoDB"],
+    image: foodOrderingImg,
   },
   {
     title: "Logistics Management",
     description: "Enterprise logistics solution for tracking shipments and managing deliveries.",
     techStack: ["Next.js", "REST APIs"],
+    image: logisticsImg,
   },
   {
     title: "AI Resume Evaluator",
     description: "AI-powered tool that analyzes resumes and provides actionable feedback.",
     techStack: ["React", "OpenAI API"],
+    image: aiResumeImg,
   },
 ];
 

@@ -4,41 +4,57 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import { motion } from "framer-motion";
 import { Smartphone, Globe } from "lucide-react";
 
+// Import project images
+import foodOrderingImg from "@/assets/projects/food-ordering.png";
+import clothingStoreImg from "@/assets/projects/clothing-store.png";
+import logisticsImg from "@/assets/projects/logistics.png";
+import olamToolsImg from "@/assets/projects/olam-tools.png";
+import surveyOlamImg from "@/assets/projects/survey-olam.png";
+import aiResumeImg from "@/assets/projects/ai-resume.png";
+import portfolioImg from "@/assets/projects/portfolio.png";
+
 const webProjects = [
   {
     title: "Food Ordering System",
     description: "A comprehensive food ordering platform featuring real-time order tracking, payment integration, restaurant management dashboard, and delivery optimization.",
     techStack: ["React", "Node.js", "MongoDB", "Socket.io"],
+    image: foodOrderingImg,
   },
   {
     title: "Clothing Ordering Website",
     description: "Modern e-commerce platform for a fashion brand with product catalog, cart functionality, size guides, and seamless checkout experience.",
     techStack: ["React", "Tailwind CSS", "Stripe"],
+    image: clothingStoreImg,
   },
   {
     title: "Logistics Management System",
     description: "Enterprise-grade logistics solution for tracking shipments, managing fleet operations, route optimization, and real-time delivery updates.",
     techStack: ["Next.js", "REST APIs", "PostgreSQL"],
+    image: logisticsImg,
   },
   {
     title: "Enterprise Internal Tools (Olam Agri)",
     description: "Suite of internal tools for Olam Agri including inventory management, employee portals, and reporting dashboards.",
     techStack: ["React", "API Integration", "TypeScript"],
+    image: olamToolsImg,
   },
   {
     title: "Survey Website (Olam Agri)",
     description: "Dynamic survey platform for collecting and analyzing customer feedback, market research, and employee satisfaction data.",
     techStack: ["React", "API Integration", "MongoDB"],
+    image: surveyOlamImg,
   },
   {
     title: "AI Resume Evaluator",
     description: "Innovative AI-powered application that analyzes resumes against job descriptions, providing actionable feedback and improvement suggestions.",
     techStack: ["React", "OpenAI API", "Node.js"],
+    image: aiResumeImg,
   },
   {
     title: "Portfolio & Agency Sites",
     description: "Collection of stunning portfolio and agency websites with modern designs, smooth animations, and optimized performance.",
     techStack: ["React", "Framer Motion", "Tailwind CSS"],
+    image: portfolioImg,
   },
 ];
 

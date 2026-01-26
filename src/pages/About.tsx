@@ -2,6 +2,7 @@ import PageTransition from "@/components/layout/PageTransition";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
 import { Code2, Rocket, Users, Award, CheckCircle } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const skills = [
   { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
@@ -89,18 +90,14 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              {/* Profile Image Placeholder */}
+              {/* Profile Image */}
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 border border-border relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-6xl font-heading font-bold text-primary-foreground mb-4">
-                      B
-                    </div>
-                    <p className="text-foreground font-heading font-semibold text-xl">Bolu Oladipo</p>
-                    <p className="text-muted-foreground">Full-Stack Developer</p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,hsl(var(--primary)/0.2),transparent_50%)]" />
+                <img 
+                  src={profileImage} 
+                  alt="Bolu Oladipo" 
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
               
               {/* Decorative Elements */}

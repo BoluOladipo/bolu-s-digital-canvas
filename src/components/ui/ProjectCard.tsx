@@ -19,14 +19,24 @@ const ProjectCard = ({ title, description, techStack, image, index }: ProjectCar
       whileHover={{ y: -5 }}
       className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
     >
-      {/* Image Placeholder */}
+      {/* Image */}
       <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.1),transparent_70%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-6xl font-heading font-bold text-primary/20">
-            {title.charAt(0)}
-          </span>
-        </div>
+        {image ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.1),transparent_70%)]" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-6xl font-heading font-bold text-primary/20">
+                {title.charAt(0)}
+              </span>
+            </div>
+          </>
+        )}
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
