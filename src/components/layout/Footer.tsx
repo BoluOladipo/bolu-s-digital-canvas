@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Twitter, Mail, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@boluoladipocodes.com", label: "Email" },
+  { icon: Mail, href: "mailto:boluemmanuel071@gmail.com", label: "Email" },
 ];
 
 const footerLinks = [
@@ -72,9 +71,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-heading font-semibold text-foreground">Get in Touch</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p>hello@boluoladipocodes.com</p>
+              <p>boluemmanuel071@gmail.com</p>
+              <p>+234 707 580 0632</p>
               <p>Lagos, Nigeria</p>
-              <p>Available for freelance work</p>
             </div>
             <Link to="/contact">
               <motion.button

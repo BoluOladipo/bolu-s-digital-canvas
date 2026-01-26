@@ -1,7 +1,7 @@
 import PageTransition from "@/components/layout/PageTransition";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Github, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@boluoladipocodes.com",
-    href: "mailto:hello@boluoladipocodes.com",
+    value: "boluemmanuel071@gmail.com",
+    href: "mailto:boluemmanuel071@gmail.com",
   },
   {
     icon: MapPin,
@@ -21,14 +21,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+234 XXX XXX XXXX",
-    href: "tel:+234XXXXXXXX",
+    value: "+234 707 580 0632",
+    href: "tel:+2347075800632",
   },
 ];
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
