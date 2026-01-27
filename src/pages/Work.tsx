@@ -12,6 +12,7 @@ import olamToolsImg from "@/assets/projects/olam-tools.png";
 import surveyOlamImg from "@/assets/projects/survey-olam.png";
 import aiResumeImg from "@/assets/projects/ai-resume.png";
 import portfolioImg from "@/assets/projects/portfolio.png";
+import EventPulseImg from "@/assets/projects/EventPulse.png";
 
 const webProjects = [
   {
@@ -27,10 +28,10 @@ const webProjects = [
     image: clothingStoreImg,
   },
   {
-    title: "Logistics Management System",
-    description: "Enterprise-grade logistics solution for tracking shipments, managing fleet operations, route optimization, and real-time delivery updates.",
+    title: "Event Attendance Management System(EventPulse)",
+    description: "Enterprise-grade attendance solution for tracking event attendance, managing events, route optimization, and real-time QR code scanner to enter event.",
     techStack: ["Next.js", "REST APIs", "PostgreSQL"],
-    image: logisticsImg,
+    image: EventPulseImg,
   },
   {
     title: "Enterprise Internal Tools (Olam Agri)",
