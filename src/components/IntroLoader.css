@@ -1,7 +1,7 @@
 .intro-container {
   position: fixed;
   inset: 0;
-  background: #0b0f14; /* your theme background */
+  background: #0b0f14; /* match your theme */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,11 +15,11 @@
   font-weight: 700;
   letter-spacing: 2px;
   color: #38bdf8; /* primary theme color */
-  animation: introZoomGlow 6s ease-in-out forwards;
+  animation: introZoomGlow 10s ease-in-out forwards;
   text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
 }
 
-/* Zoom in/out + glow pulse */
+/* Zoom in/out + subtle glow pulse */
 @keyframes introZoomGlow {
   0% {
     transform: scale(0.6);
@@ -41,9 +41,13 @@
     transform: scale(1);
     text-shadow: 0 0 15px #38bdf8, 0 0 25px #38bdf8;
   }
+  90% {
+    transform: scale(1);
+    text-shadow: 0 0 12px #38bdf8, 0 0 20px #38bdf8;
+  }
   100% {
     transform: scale(1);
-    opacity: 1; /* keep visible longer */
+    opacity: 1; /* keep visible until fade-out */
     text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
   }
 }
