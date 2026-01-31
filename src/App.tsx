@@ -1,59 +1,57 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 
 import Layout from "./components/layout/Layout";
+import AnimatedRoutes from "./components/AnimatedRoutes"; // your routing component
 import IntroLoader from "./components/IntroLoader";
-
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Work from "./pages/Work";
-import Testimonials from "./pages/Testimonials";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const AnimatedRoutes = () => {
-  const location = useLocation();
-
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </AnimatePresence>
-  );
-};
-
 const AppWrapper = () => {
   const [showIntro, setShowIntro] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 5000); // 5 seconds
+    // Start fade-out at 9.5s
+    const fadeTimer = setTimeout(() => setFadeOut(true), 9500);
+    // Remove loader at 10s
+    const hideTimer = setTimeout(() => setShowIntro(false), 10000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
-  return showIntro ? <IntroLoader /> : (
-    <BrowserRouter>
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>
-    </BrowserRouter>
+  return (
+    <>
+      {showIntro && (
+        <div
+          className="intro-container"
+          style={{ opacity: fadeOut ? 0 : 1, transition: "opacity 0.5s ease" }}
+        >
+          <h1 className="intro-text">BoluOladipoCode</h1>
+        </div>
+      )}
+      {!showIntro && (
+        <div
+          style={{
+            opacity: showIntro ? 0 : 1,
+            animation: "fadeIn 0.8s ease forwards",
+          }}
+        >
+          <BrowserRouter>
+            <Layout>
+              <AnimatedRoutes />
+            </Layout>
+          </BrowserRouter>
+        </div>
+      )}
+    </>
   );
 };
 
