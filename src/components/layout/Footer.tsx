@@ -93,7 +93,7 @@ const Footer = () => {
             © {new Date().getFullYear()} BoluOladipoCodes. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
-            Crafted with 💙 in Nigeria
+            Crafted with 💙 by BoluOladipoCodes
           </p>
         </div>
       </div>
