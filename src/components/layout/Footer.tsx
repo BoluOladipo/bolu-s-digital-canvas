@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:boluemmanuel071@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:boluoladipocodes@gmail.com", label: "Email" },
 ];
 
 const footerLinks = [
@@ -71,7 +71,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-heading font-semibold text-foreground">Get in Touch</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p>boluemmanuel071@gmail.com</p>
+              <p>boluoladipocodes@gmail.com</p>
               <p>+234 707 580 0632</p>
               <p>Lagos, Nigeria</p>
             </div>

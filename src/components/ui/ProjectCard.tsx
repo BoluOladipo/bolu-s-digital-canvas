@@ -11,28 +11,20 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, techStack, image, liveUrl, index }: ProjectCardProps) => {
-  const Wrapper: any = liveUrl ? "a" : "div";
-  const wrapperProps = liveUrl ? { href: liveUrl, target: "_blank", rel: "noopener noreferrer" } : {};
-  return (
-    <Wrapper {...wrapperProps} className="block">
-  );
-};
-const _ProjectCardInner = ({ title, description, techStack, image, liveUrl, index }: ProjectCardProps) => {
-  return (
+  const content = (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
+      className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 h-full"
     >
-      {/* Image */}
       <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/10 relative overflow-hidden">
         {image ? (
-          <img 
-            src={image} 
-            alt={title} 
+          <img
+            src={image}
+            alt={title}
             className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
@@ -59,7 +51,6 @@ const _ProjectCardInner = ({ title, description, techStack, image, liveUrl, inde
         </motion.div>
       </div>
 
-      {/* Content */}
       <div className="p-6 space-y-4">
         <div className="flex items-start justify-between">
           <h3 className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -70,9 +61,7 @@ const _ProjectCardInner = ({ title, description, techStack, image, liveUrl, inde
             className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
           />
         </div>
-        <p className="text-muted-foreground text-sm leading-relaxed">
-          {description}
-        </p>
+        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech) => (
             <span
@@ -86,6 +75,15 @@ const _ProjectCardInner = ({ title, description, techStack, image, liveUrl, inde
       </div>
     </motion.div>
   );
+
+  if (liveUrl) {
+    return (
+      <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
+        {content}
+      </a>
+    );
+  }
+  return content;
 };
 
 export default ProjectCard;
