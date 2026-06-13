@@ -6,10 +6,18 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   image?: string;
+  liveUrl?: string;
   index: number;
 }
 
-const ProjectCard = ({ title, description, techStack, image, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, techStack, image, liveUrl, index }: ProjectCardProps) => {
+  const Wrapper: any = liveUrl ? "a" : "div";
+  const wrapperProps = liveUrl ? { href: liveUrl, target: "_blank", rel: "noopener noreferrer" } : {};
+  return (
+    <Wrapper {...wrapperProps} className="block">
+  );
+};
+const _ProjectCardInner = ({ title, description, techStack, image, liveUrl, index }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
