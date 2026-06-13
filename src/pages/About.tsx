@@ -5,10 +5,13 @@ import { Code2, Rocket, Users, Award, CheckCircle } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend", items: ["Node.js", "Express", "MongoDB", "REST APIs", "PostgreSQL"] },
-  { category: "Mobile", items: ["React Native", "Expo", "Mobile UI/UX"] },
-  { category: "Tools", items: ["Git", "VS Code", "Figma", "Vercel", "AWS"] },
+  { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"] },
+  { category: "Frontend", items: ["React", "Next.js", "React Native", "Tailwind CSS", "Bootstrap", "Framer Motion"] },
+  { category: "Backend", items: ["Node.js", "Express", "REST APIs", "JWT", "Socket.io"] },
+  { category: "Databases", items: ["MongoDB Atlas", "PostgreSQL", "Firebase Firestore", "MySQL"] },
+  { category: "Cloud & Hosting", items: ["Vercel", "Render", "Firebase", "Netlify", "AWS"] },
+  { category: "APIs & Services", items: ["EmailJS", "Termii", "Twilio", "Flutterwave", "Paystack", "Stripe", "OpenAI"] },
+  { category: "Tools", items: ["Git", "GitHub", "GitHub Actions", "VS Code", "Postman", "Figma"] },
 ];
 
 const values = [

@@ -2,73 +2,125 @@ import PageTransition from "@/components/layout/PageTransition";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { motion } from "framer-motion";
-import { Smartphone, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 
-// Import project images
 import foodOrderingImg from "@/assets/projects/food-ordering.png";
 import clothingStoreImg from "@/assets/projects/clothing-store.png";
-import logisticsImg from "@/assets/projects/logistics.png";
 import olamToolsImg from "@/assets/projects/olam-tools.png";
 import surveyOlamImg from "@/assets/projects/survey-olam.png";
 import aiResumeImg from "@/assets/projects/ai-resume.png";
 import portfolioImg from "@/assets/projects/portfolio.png";
 import EventPulseImg from "@/assets/projects/EventPulse.png";
 
-const webProjects = [
+const projects = [
   {
-    title: "Food Ordering System",
-    description: "A comprehensive food ordering platform featuring real-time order tracking, payment integration, restaurant management dashboard, and delivery optimization.",
-    techStack: ["React", "Node.js", "MongoDB", "Socket.io"],
+    title: "Abi's Kitchen — Regal Plate (UK)",
+    description:
+      "Nigerian takeaway pre-order platform. Customers browse the menu, pick a pickup slot, and pay at collection. Smooth animations and a clean editorial feel.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"],
     image: foodOrderingImg,
+    liveUrl: "https://regal-plate-orders.vercel.app/",
   },
   {
-    title: "Clothing Ordering Website",
-    description: "Modern e-commerce platform for a fashion brand with product catalog, cart functionality, size guides, and seamless checkout experience.",
-    techStack: ["React", "Tailwind CSS", "Stripe"],
+    title: "Afribuy — Swift Cart",
+    description:
+      "Pan-African e-commerce marketplace connecting buyers with verified sellers. Secure Flutterwave checkout, live order tracking, and category-based discovery.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Flutterwave", "Vercel"],
     image: clothingStoreImg,
+    liveUrl: "https://swift-cart-feel.vercel.app/",
   },
   {
-    title: "Event Attendance Management System(EventPulse)",
-    description: "Enterprise-grade attendance solution for tracking event attendance, managing events, route optimization, and real-time QR code scanner to enter event.",
-    techStack: ["Next.js", "REST APIs", "PostgreSQL"],
+    title: "EventPulse — Attendance & QR Check-in",
+    description:
+      "Event management platform with QR code check-in, real-time attendance tracking, live analytics dashboard and CSV exports for organizers.",
+    techStack: ["Next.js", "React", "Node.js", "PostgreSQL", "Tailwind CSS"],
     image: EventPulseImg,
+    liveUrl: "https://eventpulse-eosin.vercel.app/",
+  },
+  {
+    title: "MTU Care Connect — Clinic System",
+    description:
+      "Health centre management system for Mountain Top University with patient records, appointments, role-based auth and staff dashboards.",
+    techStack: ["React", "Node.js", "Express", "MongoDB Atlas", "JWT"],
+    liveUrl: "https://mtu-care-connect.vercel.app/",
+  },
+  {
+    title: "Sensory Evaluation Platform (Olam Agri)",
+    description:
+      "Product quality assessment tool guiding evaluators through structured samples (Paste, Stew, Jollof Rice), capturing rankings and exporting results for R&D.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
+    image: surveyOlamImg,
+    liveUrl: "https://sensory-evaluation.vercel.app/",
+  },
+  {
+    title: "Thankgod Properties — Luxury Real Estate",
+    description:
+      "Premium real estate site showcasing curated properties, investment opportunities and lead capture, with cinematic hero animations and elegant typography.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    liveUrl: "https://thankgod-properties.vercel.app/",
+  },
+  {
+    title: "Automated Greeting Scheduler",
+    description:
+      "Full-stack scheduler that automatically sends birthday and anniversary emails using custom templates with name placeholders. Set it once, never miss a date.",
+    techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB", "EmailJS", "Render"],
+    liveUrl: "https://greeting-scheduler-frontend.vercel.app/",
+  },
+  {
+    title: "Zino Motors — Car Showcase",
+    description:
+      "Showroom website featuring luxury, sports and classic cars with detailed model pages, image galleries and a clean contact flow.",
+    techStack: ["HTML", "CSS", "JavaScript", "Vercel"],
+    liveUrl: "https://zino-motors.vercel.app/",
+  },
+  {
+    title: "AI Diet & Meal Plan Recommender",
+    description:
+      "AI-powered tool generating personalized 1-day and 7-day meal plans from symptoms, conditions and allergies. Includes a chatbot and PDF export.",
+    techStack: ["HTML", "CSS", "JavaScript", "OpenAI API", "jsPDF"],
+    liveUrl: "https://ai-diet-recommender.vercel.app/",
+  },
+  {
+    title: "Zino Weather Forecast",
+    description:
+      "Multilingual weather app (English, French, Igbo, Yoruba, Hausa, Ikwerre) covering 40+ Nigerian cities with offline detection and daily highlights.",
+    techStack: ["HTML", "CSS", "JavaScript", "OpenWeather API", "PWA"],
+    liveUrl: "https://weather-forecast-six-teal.vercel.app/",
+  },
+  {
+    title: "Chow Haven — Food Discovery",
+    description:
+      "Animated food discovery and ordering interface with rich loading states, hero typography and a focus on appetite-first visuals.",
+    techStack: ["HTML", "CSS", "JavaScript", "Vercel"],
+    liveUrl: "https://chow-haven.vercel.app/",
+  },
+  {
+    title: "Zino Furniture — Interior Studio",
+    description:
+      "Modern interior design and furniture e-commerce site with product grid, cart flow and a soft editorial design system.",
+    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap", "Vercel"],
+    liveUrl: "https://zino-furniture.vercel.app/",
   },
   {
     title: "Enterprise Internal Tools (Olam Agri)",
-    description: "Suite of internal tools for Olam Agri including inventory management, employee portals, and reporting dashboards.",
-    techStack: ["React", "API Integration", "TypeScript"],
+    description:
+      "Suite of internal tools for Olam Agri including inventory management, employee portals and reporting dashboards integrated with corporate APIs.",
+    techStack: ["React", "TypeScript", "REST APIs", "Node.js"],
     image: olamToolsImg,
   },
   {
-    title: "Survey Website (Olam Agri)",
-    description: "Dynamic survey platform for collecting and analyzing customer feedback, market research, and employee satisfaction data.",
-    techStack: ["React", "API Integration", "MongoDB"],
-    image: surveyOlamImg,
-  },
-  {
     title: "AI Resume Evaluator",
-    description: "Innovative AI-powered application that analyzes resumes against job descriptions, providing actionable feedback and improvement suggestions.",
-    techStack: ["React", "OpenAI API", "Node.js"],
+    description:
+      "AI-powered application that analyzes resumes against job descriptions and returns actionable feedback and improvement suggestions.",
+    techStack: ["React", "OpenAI API", "Node.js", "Express"],
     image: aiResumeImg,
   },
   {
-    title: "Portfolio & Agency Sites",
-    description: "Collection of stunning portfolio and agency websites with modern designs, smooth animations, and optimized performance.",
-    techStack: ["React", "Framer Motion", "Tailwind CSS"],
+    title: "BoluOladipoCodes Portfolio",
+    description:
+      "This very portfolio — animated, dark-themed and built to showcase agency-grade work with smooth page transitions.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
     image: portfolioImg,
-  },
-];
-
-const mobileProjects = [
-  {
-    title: "Cross-Platform Applications",
-    description: "Mobile applications built with React Native and Expo, delivering native performance on both iOS and Android platforms.",
-    techStack: ["React Native", "Expo", "TypeScript"],
-  },
-  {
-    title: "Mobile Commerce Solutions",
-    description: "E-commerce mobile apps with seamless shopping experience, push notifications, and offline functionality.",
-    techStack: ["React Native", "Redux", "Firebase"],
   },
 ];
 
@@ -80,10 +132,9 @@ const Work = () => {
           <SectionHeading
             badge="My Work"
             title="Projects & Portfolio"
-            subtitle="A showcase of projects I've built for clients and personal ventures"
+            subtitle="A showcase of recent client and personal projects — click any card to view it live"
           />
 
-          {/* Web Projects */}
           <div className="mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -94,38 +145,18 @@ const Work = () => {
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                 <Globe className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-2xl font-heading font-semibold text-foreground">Web Development</h3>
+              <h3 className="text-2xl font-heading font-semibold text-foreground">
+                Recent Projects
+              </h3>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {webProjects.map((project, index) => (
+              {projects.map((project, index) => (
                 <ProjectCard key={project.title} {...project} index={index} />
               ))}
             </div>
           </div>
 
-          {/* Mobile Projects */}
-          <div className="mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-8"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Smartphone className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold text-foreground">Mobile Development</h3>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {mobileProjects.map((project, index) => (
-                <ProjectCard key={project.title} {...project} index={index} />
-              ))}
-            </div>
-          </div>
-
-          {/* Skills Highlight */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,21 +164,49 @@ const Work = () => {
             className="p-8 md:p-12 rounded-2xl bg-card border border-border"
           >
             <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
-              Technologies I Work With
+              Technologies, Tools & Services I Work With
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { category: "Frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-                { category: "Backend", skills: ["Node.js", "Express", "MongoDB", "PostgreSQL"] },
-                { category: "Mobile", skills: ["React Native", "Expo", "iOS", "Android"] },
-                { category: "Other", skills: ["Git", "REST APIs", "OpenAI", "Vercel"] },
+                {
+                  category: "Frontend",
+                  skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Framer Motion"],
+                },
+                {
+                  category: "Backend",
+                  skills: ["Node.js", "Express", "REST APIs", "Python", "JWT", "Socket.io"],
+                },
+                {
+                  category: "Mobile",
+                  skills: ["React Native", "Expo", "iOS", "Android"],
+                },
+                {
+                  category: "Databases",
+                  skills: ["MongoDB Atlas", "PostgreSQL", "Firebase Firestore", "MySQL"],
+                },
+                {
+                  category: "Cloud & Hosting",
+                  skills: ["Vercel", "Render", "Firebase", "Netlify", "AWS"],
+                },
+                {
+                  category: "Messaging & APIs",
+                  skills: ["EmailJS", "Termii", "Twilio", "Flutterwave", "Paystack", "Stripe", "OpenAI API", "OpenWeather API"],
+                },
+                {
+                  category: "DevOps & Tools",
+                  skills: ["Git", "GitHub", "GitHub Actions", "VS Code", "Postman", "Figma"],
+                },
+                {
+                  category: "Other",
+                  skills: ["PWA", "jsPDF", "i18n", "QR Codes", "WebSockets"],
+                },
               ].map((group, index) => (
                 <motion.div
                   key={group.category}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.05 }}
                 >
                   <h4 className="font-heading font-semibold text-primary mb-3">{group.category}</h4>
                   <div className="flex flex-wrap gap-2">
