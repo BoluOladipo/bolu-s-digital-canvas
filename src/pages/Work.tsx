@@ -2,7 +2,7 @@ import PageTransition from "@/components/layout/PageTransition";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { motion } from "framer-motion";
-import { Globe } from "lucide-react";
+import { Globe, Smartphone } from "lucide-react";
 
 import olamToolsImg from "@/assets/projects/olam-tools.png";
 import aiResumeImg from "@/assets/projects/ai-resume.png";
@@ -20,6 +20,42 @@ import aiDietImg from "@/assets/projects/new/ai-diet.png";
 import weatherImg from "@/assets/projects/new/weather.png";
 import chowHavenImg from "@/assets/projects/new/chow-haven.png";
 import zinoFurnitureImg from "@/assets/projects/new/zino-furniture.png";
+
+import fitTrackImg from "@/assets/projects/new/fittrack-mobile.jpg";
+import eatsNowImg from "@/assets/projects/new/eatsnow-mobile.jpg";
+import payFlowImg from "@/assets/projects/new/payflow-mobile.jpg";
+import learnLoopImg from "@/assets/projects/new/learnloop-mobile.jpg";
+
+const mobileApps = [
+  {
+    title: "FitTrack — Fitness & Wellness",
+    description:
+      "Cross-platform fitness companion with workout tracking, heart-rate sync, daily activity rings and personalized weekly goals.",
+    techStack: ["React Native", "Expo", "TypeScript", "Firebase", "HealthKit"],
+    image: fitTrackImg,
+  },
+  {
+    title: "EatsNow — Food Delivery",
+    description:
+      "Mobile food ordering app with restaurant discovery, live order tracking on map, in-app payments and push notifications.",
+    techStack: ["React Native", "Expo", "Node.js", "Stripe", "Google Maps"],
+    image: eatsNowImg,
+  },
+  {
+    title: "PayFlow — Mobile Wallet",
+    description:
+      "Secure fintech wallet for sending, receiving and tracking money with biometric auth, virtual cards and transaction insights.",
+    techStack: ["React Native", "TypeScript", "Node.js", "PostgreSQL", "Paystack"],
+    image: payFlowImg,
+  },
+  {
+    title: "LearnLoop — Micro-Learning",
+    description:
+      "Bite-sized learning app with video lessons, progress tracking, quizzes and offline mode for on-the-go study sessions.",
+    techStack: ["React Native", "Expo", "Firebase Firestore", "Video SDK"],
+    image: learnLoopImg,
+  },
+];
 
 const projects = [
   {
@@ -169,6 +205,28 @@ const Work = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
+                <ProjectCard key={project.title} {...project} index={index} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-3 mb-8"
+            >
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Smartphone className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-2xl font-heading font-semibold text-foreground">
+                Mobile Apps
+              </h3>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mobileApps.map((project, index) => (
                 <ProjectCard key={project.title} {...project} index={index} />
               ))}
             </div>
