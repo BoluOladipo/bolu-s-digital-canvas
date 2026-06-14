@@ -27,7 +27,7 @@ const projects = [
     description:
       "Nigerian takeaway pre-order platform. Customers browse the menu, pick a pickup slot, and pay at collection. Smooth animations and a clean editorial feel.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"],
-    image: foodOrderingImg,
+    image: regalPlateImg,
     liveUrl: "https://regal-plate-orders.vercel.app/",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     description:
       "Pan-African e-commerce marketplace connecting buyers with verified sellers. Secure Flutterwave checkout, live order tracking, and category-based discovery.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Flutterwave", "Vercel"],
-    image: clothingStoreImg,
+    image: swiftCartImg,
     liveUrl: "https://swift-cart-feel.vercel.app/",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     description:
       "Event management platform with QR code check-in, real-time attendance tracking, live analytics dashboard and CSV exports for organizers.",
     techStack: ["Next.js", "React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    image: EventPulseImg,
+    image: eventPulseImg,
     liveUrl: "https://eventpulse-eosin.vercel.app/",
   },
   {
@@ -51,6 +51,7 @@ const projects = [
     description:
       "Health centre management system for Mountain Top University with patient records, appointments, role-based auth and staff dashboards.",
     techStack: ["React", "Node.js", "Express", "MongoDB Atlas", "JWT"],
+    image: mtuCareImg,
     liveUrl: "https://mtu-care-connect.vercel.app/",
   },
   {
@@ -58,7 +59,7 @@ const projects = [
     description:
       "Product quality assessment tool guiding evaluators through structured samples (Paste, Stew, Jollof Rice), capturing rankings and exporting results for R&D.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
-    image: surveyOlamImg,
+    image: sensoryImg,
     liveUrl: "https://sensory-evaluation.vercel.app/",
   },
   {
@@ -66,6 +67,7 @@ const projects = [
     description:
       "Premium real estate site showcasing curated properties, investment opportunities and lead capture, with cinematic hero animations and elegant typography.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    image: thankgodImg,
     liveUrl: "https://thankgod-properties.vercel.app/",
   },
   {
@@ -73,6 +75,7 @@ const projects = [
     description:
       "Full-stack scheduler that automatically sends birthday and anniversary emails using custom templates with name placeholders. Set it once, never miss a date.",
     techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB", "EmailJS", "Render"],
+    image: greetingImg,
     liveUrl: "https://greeting-scheduler-frontend.vercel.app/",
   },
   {
@@ -80,6 +83,7 @@ const projects = [
     description:
       "Showroom website featuring luxury, sports and classic cars with detailed model pages, image galleries and a clean contact flow.",
     techStack: ["HTML", "CSS", "JavaScript", "Vercel"],
+    image: zinoMotorsImg,
     liveUrl: "https://zino-motors.vercel.app/",
   },
   {
@@ -87,6 +91,7 @@ const projects = [
     description:
       "AI-powered tool generating personalized 1-day and 7-day meal plans from symptoms, conditions and allergies. Includes a chatbot and PDF export.",
     techStack: ["HTML", "CSS", "JavaScript", "OpenAI API", "jsPDF"],
+    image: aiDietImg,
     liveUrl: "https://ai-diet-recommender.vercel.app/",
   },
   {
@@ -94,6 +99,7 @@ const projects = [
     description:
       "Multilingual weather app (English, French, Igbo, Yoruba, Hausa, Ikwerre) covering 40+ Nigerian cities with offline detection and daily highlights.",
     techStack: ["HTML", "CSS", "JavaScript", "OpenWeather API", "PWA"],
+    image: weatherImg,
     liveUrl: "https://weather-forecast-six-teal.vercel.app/",
   },
   {
@@ -101,6 +107,7 @@ const projects = [
     description:
       "Animated food discovery and ordering interface with rich loading states, hero typography and a focus on appetite-first visuals.",
     techStack: ["HTML", "CSS", "JavaScript", "Vercel"],
+    image: chowHavenImg,
     liveUrl: "https://chow-haven.vercel.app/",
   },
   {
@@ -108,6 +115,7 @@ const projects = [
     description:
       "Modern interior design and furniture e-commerce site with product grid, cart flow and a soft editorial design system.",
     techStack: ["HTML", "CSS", "JavaScript", "Bootstrap", "Vercel"],
+    image: zinoFurnitureImg,
     liveUrl: "https://zino-furniture.vercel.app/",
   },
   {
