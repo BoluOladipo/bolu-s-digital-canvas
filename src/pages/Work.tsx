@@ -4,13 +4,22 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import { motion } from "framer-motion";
 import { Globe } from "lucide-react";
 
-import foodOrderingImg from "@/assets/projects/food-ordering.png";
-import clothingStoreImg from "@/assets/projects/clothing-store.png";
 import olamToolsImg from "@/assets/projects/olam-tools.png";
-import surveyOlamImg from "@/assets/projects/survey-olam.png";
 import aiResumeImg from "@/assets/projects/ai-resume.png";
 import portfolioImg from "@/assets/projects/portfolio.png";
-import EventPulseImg from "@/assets/projects/EventPulse.png";
+
+import regalPlateImg from "@/assets/projects/new/regal-plate.png";
+import swiftCartImg from "@/assets/projects/new/swift-cart.png";
+import eventPulseImg from "@/assets/projects/new/eventpulse.png";
+import mtuCareImg from "@/assets/projects/new/mtu-care.png";
+import sensoryImg from "@/assets/projects/new/sensory.png";
+import thankgodImg from "@/assets/projects/new/thankgod.png";
+import greetingImg from "@/assets/projects/new/greeting.png";
+import zinoMotorsImg from "@/assets/projects/new/zino-motors.png";
+import aiDietImg from "@/assets/projects/new/ai-diet.png";
+import weatherImg from "@/assets/projects/new/weather.png";
+import chowHavenImg from "@/assets/projects/new/chow-haven.png";
+import zinoFurnitureImg from "@/assets/projects/new/zino-furniture.png";
 
 const projects = [
   {
