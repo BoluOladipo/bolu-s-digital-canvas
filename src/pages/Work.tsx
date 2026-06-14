@@ -210,6 +210,28 @@ const Work = () => {
             </div>
           </div>
 
+          <div className="mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-3 mb-8"
+            >
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Smartphone className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-2xl font-heading font-semibold text-foreground">
+                Mobile Apps
+              </h3>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mobileApps.map((project, index) => (
+                <ProjectCard key={project.title} {...project} index={index} />
+              ))}
+            </div>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
